@@ -10,7 +10,7 @@ if (orderForm) {
     classTo: 'order__element',
     errorTextParent: 'order__element',
     errorTextClass: 'order__name-error-text',
-  }, false);
+  }, true);
 
   pristine.addValidator(orderPhone, validatePhoneLength, 'Введён некорректный номер', '1', false);
 

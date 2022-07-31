@@ -34,7 +34,6 @@
       <button class="cart__increment"></button>
     </div>
     <p class="cart__price">0 ₽</p>
-    <button class="cart__delete"></button>
-    <button class="cart__delete-mobile">Удалить</button>
+    <button class="cart__delete"><span>Удалить</span></button>
   </li>
 </template>

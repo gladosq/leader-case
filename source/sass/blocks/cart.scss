@@ -149,6 +149,10 @@
   cursor: pointer;
   transition: all 0.2s;
 
+  & span {
+    display: none;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -187,10 +191,6 @@
 .cart__price {
   font-size: 18px;
   font-weight: 700;
-}
-
-.cart__delete-mobile {
-  display: none;
 }
 
 .cart__total {
@@ -247,46 +247,29 @@
   }
 
   .cart__delete {
-    display: none;
-  }
-
-  .cart__delete-mobile {
-    display: block;
-    font-size: 16px;
-    font-weight: 500;
     height: 40px;
     padding-left: 70px;
-    padding-right: 46px;
+    padding-right: 90px;
     background: $basic-blue;
     border: 0;
     color: $basic-white;
     position: relative;
     margin-top: 8px;
 
+    & span {
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
     &::before {
-      content: "";
-      position: absolute;
-      width: 18px;
-      height: 1px;
+      left: 30px;
       background: $basic-white;
-      top: 19px;
-      left: 42px;
-      transform: rotate(45deg);
     }
 
     &::after {
-      content: "";
-      position: absolute;
-      width: 18px;
-      height: 1px;
+      left: 30px;
       background: $basic-white;
-      top: 19px;
-      left: 42px;
-      transform: rotate(-45deg);
-    }
-
-    &:active {
-      opacity: 0.6;
     }
   }
 }

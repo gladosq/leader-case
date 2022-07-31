@@ -387,6 +387,8 @@
   position: relative;
   cursor: pointer;
   transition: all 0.2s; }
+  .cart__delete span {
+    display: none; }
   .cart__delete::before {
     content: "";
     position: absolute;
@@ -415,9 +417,6 @@
 .cart__price {
   font-size: 18px;
   font-weight: 700; }
-
-.cart__delete-mobile {
-  display: none; }
 
 .cart__total {
   font-size: 30px;
@@ -458,39 +457,24 @@
     order: -2;
     margin-bottom: 0; }
   .cart__delete {
-    display: none; }
-  .cart__delete-mobile {
-    display: block;
-    font-size: 16px;
-    font-weight: 500;
     height: 40px;
     padding-left: 70px;
-    padding-right: 46px;
+    padding-right: 90px;
     background: #296DC1;
     border: 0;
     color: #ffffff;
     position: relative;
     margin-top: 8px; }
-    .cart__delete-mobile::before {
-      content: "";
-      position: absolute;
-      width: 18px;
-      height: 1px;
-      background: #ffffff;
-      top: 19px;
-      left: 42px;
-      transform: rotate(45deg); }
-    .cart__delete-mobile::after {
-      content: "";
-      position: absolute;
-      width: 18px;
-      height: 1px;
-      background: #ffffff;
-      top: 19px;
-      left: 42px;
-      transform: rotate(-45deg); }
-    .cart__delete-mobile:active {
-      opacity: 0.6; } }
+    .cart__delete span {
+      display: block;
+      font-size: 16px;
+      font-weight: 500; }
+    .cart__delete::before {
+      left: 30px;
+      background: #ffffff; }
+    .cart__delete::after {
+      left: 30px;
+      background: #ffffff; } }
 
 @media (max-width: 500px) {
   .cart__item img {
@@ -574,13 +558,31 @@
 @media (max-width: 500px) {
   .order {
     margin-bottom: 50px; }
+  .order__name-error-text {
+    padding-top: 2px; }
+  .order__element {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0; }
+    .order__element input {
+      width: 250px; }
   .order__wrapper {
     padding-left: 16px;
     padding-right: 16px;
     padding-bottom: 30px;
     padding-top: 50px; }
-  .order__form legend {
-    padding-bottom: 30px; } }
+  .order__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .order__form legend {
+      padding-bottom: 30px;
+      padding-left: 30px;
+      padding-right: 30px; }
+    .order__form button {
+      width: 290px; } }
 
 .modal-success__wrapper {
   position: fixed;
